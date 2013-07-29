@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>API REST CONGRESO</title>
+    <title>API REST Donde hay Misa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -34,125 +34,51 @@
   <body>
  
         
-        <a href="https://github.com/ajamaica/Api-REST-del-Congreso"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+        <a href="https://github.com/jupazave/Api-REST-donde-hay-misa"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
         
 
       <!-- Subhead
       ================================================== -->
       <header class="jumbotron subhead" id="overview">
         <div class="container">
-          <h1>API REST del Congreso <span class="label label-info">Beta</span></h1>
-          <p class="lead">Servicio Open Source y totalmente gratuito que mapea el contenido generado por el congreso para que desarrolladores puedan construir lo que deseen.</p>
+          <h1>API REST Donde hay misa <span class="label label-info">Alpha</span></h1>
+          <p class="lead">Servicio basado en el desarrollo de <a href="//congresorest.appspot.com" title="ajamaica">ajamaica</a> utilizando los datos de <a href="//dondehaymisa.com" title="Donde hay misa">Donde hay misa</a> para la creacion de una aplicacion movil.</p>
         </div>
-      </header>
+      </header> 
 
 
         <div class="container">
 
           <!-- Docs nav
           ================================================== -->
-          <div class="row">
-            <div class="span3 bs-docs-sidebar">
-              <ul class="nav nav-list bs-docs-sidenav">
-                <li><a href="#diputado"><i class="icon-chevron-right"></i>Lista Diputados</a></li>
-                <li><a href="#diputado_id"><i class="icon-chevron-right"></i>Single Diputados</a></li>
-                <li><a href="#diputado_id_iniciativa"><i class="icon-chevron-right"></i>Iniciativas por Diputado</a></li>
-                <li><a href="#propociciones"><i class="icon-chevron-right"></i>Proposiciones por Diputado</a></li>
-                <li><a href="#votos"><i class="icon-chevron-right"></i>Votos por Diputado</a></li>
-                <li><a href="#asistentes"><i class="icon-chevron-right"></i>Asistentes por Diputado</a></li>
-                
-              </ul>
-            </div>
-            <div class="span9">
+          <div class="row-fluid">
+            
+            <div class="span12">
 
 
 
               <!-- Lista diputados
               ================================================== -->
-              <section id="diputado">
+              <section>
                 <div class="page-header">
-                  <h1>1. Diputados</h1>
+                  <h1>Par obtener datos:</h1>
                 </div>
-                <p>Lista los diputados en JSON <code>/diputado/</code></p>
+                <ul>
+                  <li>Lunes: <code>/lunes/{id_estado}</code></li>
+                  <li>Martes: <code>/martes/{id_estado}</code></li>
+                  <li>Miercoles: <code>/miercoles/{id_estado}</code></li>
+                  <li>Jueves: <code>/jueves/{id_estado}</code></li>
+                  <li>Viernes: <code>/viernes/{id_estado}</code></li>
+                  <li>Sabado: <code>/sabado/{id_estado}</code></li>
+                  <li>Domingo: <code>/domingo/{id_estado}</code></li>
+                </ul>
+
+                <p>Ejemplo de Lunes</p>
                 
-                 <pre class="prettyprint">[{"entidad": "Aguascalientes", "foto": "None", "tipo_de_eleccion": "Mayor\u00eda Relativa", "nu_diputado": "1", "distrito": "1", "fraccion": "PRI", "cabecera": "Jes\u00fas Mar\u00eda", "onomastico": "12-octubre", "suplente": " Laura Patricia Romo Castorena", "nombre": "Moreno Montoya J. Pilar", "curul": "A-009", "email": "pilar.moreno@congreso.gob.mx"}, {"entidad": "Aguascalientes", "foto": "None", "tipo_de_eleccion": "Mayor\u00eda Relativa", "nu_diputado": "2", "distrito": "2", "fraccion": "PAN", "cabecera": "Aguascalientes", "onomastico": "25-mayo", "suplente": " M\u00f3nica Becerra Moreno", "nombre": "Jim\u00e9nez Esquivel Mar\u00eda Teresa", "curul": "H-248", "email": "teresa.jimenez@congreso.gob.mx"}, {"entidad": "Aguascalientes", "foto": "None", "tipo_de_eleccion": "Mayor\u00eda Relativa", "nu_diputado": "3", "distrito": "3", "fraccion": "PAN", "cabecera": "Aguascalientes", "onomastico": "8-diciembre", "suplente": " H\u00e9ctor Eduardo Anaya P\u00e9rez", "nombre": "Gonz\u00e1lez Serna Jos\u00e9 \u00c1ngel", "curul": "A-002", "email": "jangel.gonzalez@congreso.gob.mx"}, {"entidad": "Baja California", "foto": "None", "tipo_de_eleccion": "Mayor\u00eda Relativa", "nu_diputado": "4", "distrito": "1", "fraccion": "PRI", "cabecera": "Mexicali", "onomastico": "30-marzo", "suplente": " Miguel Alfonso Vildosola Lacarra", "nombre": "Castillo Valdez Benjamin (LICENCIA)", "curul": "B-038", "email": "benjamin.castillo@congreso.gob.mx"}, {"entidad": "Baja California", "foto": "None", "tipo_de_eleccion": "Mayor\u00eda Relativa", "nu_diputado": "5", "distrito": "2", "fraccion": "PRI", "cabecera": "Mexicali", "onomastico": "9-septiembre", "suplente": " Beatriz Ariana Flores Alvarado", "nombre": "Schroeder Verdugo Mar\u00eda Fernanda", "curul": "C-067", "email": "maria.schroeder@congreso.gob.mx"}, {"entidad": "Baja California", "foto": "None", "tipo_de_eleccion": "Mayor\u00eda Relativa", "nu_diputado": "8", "distrito": "5", "fraccion": "PAN", "cabecera": "Tijuana", "onomastico": "31-octubre", "suplente": " Juan Andr\u00e9s Sollano Garc\u00eda", "nombre": "Gast\u00e9lum Buenrostro Juan Manuel", "curul": "H-244", "email": "juan.gastelum@congreso.gob.mx"}, {"entidad": "Baja California", "foto": "None", "tipo_de_eleccion": "Mayor\u00eda Relativa", "nu_diputado": "9", "distrito": "6", "fraccion": "PRI", "cabecera": "Tijuana", "onomastico": "17-septiembre", "suplente": " Mart\u00edn Plascencia \u00c1vila", "nombre": "L\u00f3pez Alvarado Jaime Chris", "curul": "H-267", "email": "chrislopez@congreso.gob.mx"}, ... ]
-                 </pre>
+                <pre class="prettyprint">[{"imagen": "http://www.dondehaymisa.com/Dhm_aguascalientes/imgparroquias/catedral.jpg", "direccion": "Plaza de la Patria oriente, Centro C.P. 2000, Aguascalientes", "nombre": "Catedral: Nuestra Se&#241;ora de la Asunci&#243;n", "arquidiosesis": "Di&#243;cesis de Aguascalientes", "horarios": "Misas del lunes: 6:00 a.m. 7:00 a.m. 8:00 a.m. 9:00 a.m. 10:00 a.m. 11:00 a.m. 12:00 p.m. 7:30 p.m. 8:30 p.m."}, {"imagen": "http://www.dondehaymisa.com/Dhm_aguascalientes/imgparroquias/divino.nino.jpg", "direccion": "Av. Del rey No.223, Fracc. Lomas del Ajedrez C.P. 20299, Aguascalientes", "nombre": "Santuario: El Divino Ni&#241;o", "arquidiosesis": "Di&#243;cesis de Aguascalientes", "horarios": "Misas del lunes: 8:30 a.m. 7:30 p.m."}, {"imagen": "http://www.dondehaymisa.com/Dhm_aguascalientes/imgparroquias/xto-redentor.jpg", "direccion": "Blvd. Aguascalientes Esq. Par&#237;s, Fracc. Del Valle C.P. 20080, Aguascalientes", "nombre": "Parroquia: Cristo Redentor", "arquidiosesis": "Di&#243;cesis de Aguascalientes", "horarios": "Misas del lunes: 8:00 a.m. 7:00 p.m."}]</pre>
 
                 
               </section>
-
-
-
-              <!-- File structure
-              ================================================== -->
-              <section id="diputado_id">
-                <div class="page-header">
-                  <h1>2. Single Diputados</h1>
-                </div>
-                <p>Información en JSON dado un ID de diputado. <code>/diputado/{id}</code></p>
-                
-                <pre class="prettyprint">{"entidad": "M\u00e9xico", "foto": "None", "tipo_de_eleccion": "Mayor\u00eda Relativa", "nu_diputado": "153", "distrito": "28", "fraccion": "PRI", "cabecera": "Zumpango de Ocampo", "onomastico": "25-septiembre", "suplente": " Mar\u00eda Gabriela Bardales Hern\u00e1ndez", "nombre": "Bernal Bolnik Sue Ellen", "curul": "J-355", "email": "sue.bernal@congreso.gob.mx"}</pre>
-               
-              </section>
-
-
-
-              <!-- Contents
-              ================================================== -->
-              <section id="diputado_id_iniciativa">
-                <div class="page-header">
-                  <h1>3. Iniciativas por Diputado <span class="label label-warning">En Desarrollo</span></h1>
-                </div>
-                
-                <p>Información de Iniciativas en las que trabaja en JSON dado un ID de diputado. <code>/diputado/{id}/iniciativas</code></p>
-                <pre class="prettyprint"></pre>
-                
-              </section>
-
-
-
-              <!-- HTML template
-              ================================================== -->
-              <section id="propociciones">
-                <div class="page-header">
-                  <h1>4. Proposiciones por Diputado</h1>
-                </div>
-                
-                 <p>Información de Proposiciones en JSON dado un ID de diputado. <code>/diputado/{id}/proposiciones</code></p>
-
-                    <pre class="prettyprint">[{"diputado": "breu Arti\u00f1ano Roc\u00edo Adriana", "resolutivos": "Aprobadacon fecha23-Enero-2013", "comision": "None", "num": "None", "turno": "23-Enero-2013", "enlace": "http://gaceta.diputados.gob.mx/Gaceta/62/2013/ene/20130123-IV.html#Proposicion7 ", "nombre": " Punto de acuerdo por el que la Comisi\u00f3n Permanente se solidariza con los productores de ca\u00f1a en sus demandas debido a la baja en el precio del az\u00facar."}]</pre>
-                    
-              </section>
-
-
-
-              
-
-
-
-
-              <!-- Next
-              ================================================== -->
-              <section id="votos">
-                <div class="page-header">
-                  <h1>5. Votos por Diputado</h1>
-                </div>
-                
-                 <p>Información de Votaciones en JSON dado un ID de diputado. <code>/diputado/{id}/votaciones</code></p>
-
-                    <pre class="prettyprint">{"6 Diciembre 2012": [{"titulo": "DECRETO QUE ADICIONA UN SEGUNDO PARRAFO AL ARTICULO 9 DE LA LEY DE ENERGIA PARA EL CAMPO (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "1", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA, ADICIONA Y DEROGA DIVERSAS DISPOSICIONES DE LA LEY ORGANICA DE LA ARMADA DE MEXICO (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "2", "sentido": "A favor"}], "5 Marzo 2013": [{"titulo": "DECRETO QUE ADICIONA LA FRACCION I BIS AL ARTICULO 61 DE LA LEY GENERAL DE SALUD (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "1", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA Y DEROGA DIVERSAS DISPOSICIONES DE LOS ARTICULOS 61, 111, 112 Y 114 DE LA CPEUM (EN LO GENERAL Y EN LO PARTICULAR LOS ARTICULOS NO RESERVADOS)", "id_dia": "2", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA Y DEROGA DIV. DISP. DE LOS ARTICULOS 61, 111, 112 Y 114 DE LA CPEUM (EN LO PARTICULAR LOS ARTS. 61, 111 PARRAFOS PRIMERO EN SUS TERMINOS Y SEGUNDO Y CUARTO CON LAS MODIFICACIONES ACEPTADAS)", "id_dia": "3", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA Y DEROGA DIV. DISP. DE LOS ARTICULOS 61, 111, 112 Y 114 DE LA CPEUM (EN LO PARTICULAR EL ART. 111 PARRAFO QUINTO)", "id_dia": "4", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA Y DEROGA DIV. DISP. DE LOS ARTICULOS 61, 111, 112 Y 114 DE LA CPEUM (EN LO PARTICULAR EL ART. 111 PARRAFO SEXTO, OCTAVO, 114 RESERVADOS EN SUS TERMINOS)", "id_dia": "5", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA Y DEROGA DIV. DISP. DE LOS ARTICULOS 61, 111, 112 Y 114 DE LA CPEUM (EN LO PARTICULAR SEXTO TRANSITORIO CON LA MODIFICACION ACEPTADA)", "id_dia": "6", "sentido": "A favor"}], "26 Febrero 2013": [{"titulo": "DECRETO POR EL QUE SE REFORMAN Y ADICIONAN DIVERSAS DISPOSICIONES DE LA LEY GENERAL DE SALUD, EN MATERIA DE BANCOS DE SANGRE (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "1", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA LAS FRACCIONES I Y III DEL ARTICULO 245 DE LA LEY GENERAL DE SALUD (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "2", "sentido": "A favor"}, {"titulo": "DECRETO QUE ADICIONA UN SEGUNDO PARRAFO AL ARTICULO 41 DE LA LEY GENERAL DE TURISMO (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "3", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA LOS ARTICULOS 2, 3, 3 BIS Y 4, FRACCION I DE LA LEY DEL INSTITUTO MEXICANO DE LA JUVENTUD (EN LO GENERAL Y EN LO PARTICULAR CON LAS MODIFICACIONES ACEPTADAS)", "id_dia": "4", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA Y ADICIONA LOS ARTICULOS 61, 64 Y 79 DE LA LEY GENERAL DE SALUD, EN MATERIA DE PROFESIONALIZACION DE PARTERAS (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "5", "sentido": "A favor"}], "21 Febrero 2013": [{"titulo": "DECRETO POR EL QUE SE REFORMA EL DIVERSO POR EL QUE SE CREA LA MEDALLA AL M\u00c9RITO C\u00cdVICO EDUARDO NERI, LEGISLADORES DE 1913, PUBLICADO EN EL DIARIO OFICIAL DE LA FEDERACI\u00d3N EL 2 DE MAYO DE 2001; Y SE REFORMAN Y ADICIONAN DIVERSAS DISPOSICIONES DEL REGLAMENTO DE LA MEDALLA AL M\u00c9RITO C\u00cdVICO EDUARDO NERI, LEGISLADORES DE 1913 (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "1", "sentido": "A favor"}, {"titulo": "DECRETO QUE ESTABLECE LAS CARACTERISTICAS DE UNA MONEDA CONMEMORATIVA DEL 150 ANIVERSARIO DEL NATALICIO, Y EL 100 ANIVERSARIO LUCTUOSO DE BELISARIO DOMINGUEZ PALENCIA (EN LO GRAL Y EN LO PART.)", "id_dia": "2", "sentido": "A favor"}, {"titulo": "DECRETO QUE REFORMA EL ARTICULO 391, Y DEROGA LOS ARTICULOS DEL 402 AL 420 DEL CODIGO CIVIL FEDERAL (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "3", "sentido": "A favor"}, {"titulo": "DECRETO QUE ADICIONA UN ULTIMO PARRAFO AL ARTICULO 81 DE LA LEY ORGANICA DEL PODER JUDICIAL DE LA FEDERACION (EN LO GENERAL Y EN LO PARTICULAR)", "id_dia": "4", "sentido": "A favor"}, {"titulo": "DECRETO QUE ADICIONA DIVERSAS DISPOSICIONES A LOS ARTICULOS 4 Y 12 DE LA LEY GENERAL PARA EL DESARROLLO DE LA COMPETITIVIDAD DE LA MICRO, PEQUE\u00d1A Y MEDIANA EMPRESA (EN LO GRAL Y EN LO PART.)", "id_dia": "5", "sentido": "A favor"}], ... }</pre>
-                    
-              </section>
-
-              <section id="asistentes">
-                  <div class="page-header">
-                    <h1>6. Asistencias por Diputado</h1>
-                  </div>
-                  
-                  <p>Información de Asistencias en JSON dado un ID de diputado. <code>/diputado/{id}/asistencias</code></p>
-                  <pre class="prettyprint">{"Noviembre 2012": [{"estado": "A", "dia": "6"}, {"estado": "A", "dia": "8"}, {"estado": "A", "dia": "13"}, {"estado": "A", "dia": "15"}, {"estado": "AC", "dia": "20"}, {"estado": "A", "dia": "22"}, {"estado": "A", "dia": "27"}, {"estado": "A", "dia": "28"}], "Octubre 2012": [{"estado": "A", "dia": "2"}, {"estado": "A", "dia": "4"}, {"estado": "A", "dia": "9"}, {"estado": "A", "dia": "11"}, {"estado": "A", "dia": "16"}, {"estado": "A", "dia": "18"}, {"estado": "A", "dia": "23"}, {"estado": "A", "dia": "25"}, {"estado": "A", "dia": "30"}, {"estado": "A", "dia": "31"}], "Febrero 2013": [{"estado": "A", "dia": "1"}, {"estado": "IJ", "dia": "6"}, {"estado": "A", "dia": "7"}, {"estado": "A", "dia": "12"}, {"estado": "A", "dia": "14"}, {"estado": "A", "dia": "19"}, {"estado": "A", "dia": "21"}, {"estado": "I", "dia": "22"}, {"estado": "A", "dia": "26"}], "Diciembre 2012": [{"estado": "A", "dia": "1"}, {"estado": "A", "dia": "4"}, {"estado": "A", "dia": "6"}, {"estado": "A", "dia": "11"}, {"estado": "A", "dia": "12"}, {"estado": "A", "dia": "13"}, {"estado": "A", "dia": "18"}, {"estado": "A", "dia": "19"}, {"estado": "A", "dia": "20"}, {"estado": "A", "dia": "21"}], "Abril 2013": [], "Marzo 2013": [], "Septiembre 2012": [{"estado": "A", "dia": "1"}, {"estado": "A", "dia": "4"}, {"estado": "A", "dia": "6"}, {"estado": "A", "dia": "11"}, {"estado": "A", "dia": "13"}, {"estado": "A", "dia": "18"}, {"estado": "A", "dia": "20"}, {"estado": "A", "dia": "25"}, {"estado": "A", "dia": "27"}, {"estado": "A/A", "dia": "28"}]}</pre>
-                </section>
-
 
             </div>
           </div>
@@ -160,7 +86,7 @@
         </div>
         <footer class="footer">
               <div class="container">
-                <p>Desarrollado por <a href="http://twitter.com/ajamaica" target="_blank">@ajamaica</a>.</p>
+                <p>Desarrollado por <a href="//twitter.com/jupazave" title="@jupazave">@jupazave</a>. Basado en el desarrollo de <a href="http://twitter.com/ajamaica" target="_blank">@ajamaica</a>.</p>
                 <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
             
             </footer>
